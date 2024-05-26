@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Comulsa Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="fotos/comulsa logo.png" alt="Comulsa logo" class="comulsalogo-image">
+        </div>
+    </header>
+    <div class="video-container">
+        <video autoplay muted loop class="background-video">
+            <source src="videos/0524.mov" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+        <div class="grid-container">
+            <div class="grid-item" id="item1"><img src="fotos/COMULSA.svg" alt="ComulsaEmpresa" data-id="item1"></div>
+            <div class="grid-item" id="item2"><img src="fotos/SERVICIOS.jpg" alt="Servicios" data-id="item2"></div>
+            <div class="grid-item" id="item3"><img src="fotos/LÍNEA DE PRODUCTOS.jpg" alt="LineadeProductos" data-id="iteme3"></div>
+            <div class="grid-item2" id="item4"><img src="fotos/UNDERFIRE.jpg" alt="Underfire" data-id="item4"></div>
+            <div class="grid-item" id="item5"><img src="fotos/CAPACITACIONES.jpg" alt="Capacitaciones" data-id="item5"></div>
+            <div class="grid-item" id="item6"><div class="overlay">NUESTRAS MARCAS</div></div>
+            <div class="grid-item3" id="item7">
+                <div class="scroll-container">
+                    <div class="swiper-container swiper-container-top">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="fotos/CATU.png" alt="Imagen 1" data-id="imgen1"></div>
+                            <div class="swiper-slide"><img src="fotos/MAKITA.png" alt="Imagen 2" data-id="imagen2"></div>
+                            <div class="swiper-slide"><img src="fotos/MEGGER.png" alt="Imagen 3" data-id="imagen3"></div>
+                            <div class="swiper-slide"><img src="fotos/MILWAUKEE.png" alt="Imagen 4" data-id="imagen4"></div>
+                            <div class="swiper-slide"><img src="fotos/NOJA POWER.png" alt="Imagen 5" data-id="imagen5"></div>
+                            <div class="swiper-slide"><img src="fotos/POWER LINE.png" alt="Imagen 6" data-id="imagen6"></div>
+                            <div class="swiper-slide"><img src="fotos/RITZ.png" alt="Imagen 7" data-id="imagen7"></div>
+                            <div class="swiper-slide" ><img src="fotos/SALISBURY.png" alt="Imagen 8" data-id="imagen8"></div>
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next swiper-button-next-top"></div>
+                        <div class="swiper-button-prev swiper-button-prev-top"></div>
+                    </div>
+                    <div class="swiper-container swiper-container-bottom">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="fotos/NOJA POWER.png" alt="Imagen 5" data-id="imagen5"></div>
+                            <div class="swiper-slide"><img src="fotos/POWER LINE.png" alt="Imagen 6" data-id="imagen6"></div>
+                            <div class="swiper-slide"><img src="fotos/RITZ.png" alt="Imagen 7" data-id="imagen7"></div>
+                            <div class="swiper-slide" ><img src="fotos/SALISBURY.png" alt="Imagen 8" data-id="imagen8"></div>
+                            <div class="swiper-slide"><img src="fotos/CATU.png" alt="Imagen 1" data-id="imagen1"></div>
+                            <div class="swiper-slide"><img src="fotos/MAKITA.png" alt="Imagen 2" data-id="imagen2"></div>
+                            <div class="swiper-slide"><img src="fotos/MEGGER.png" alt="Imagen 3" data-id="imagen3"></div>
+                            <div class="swiper-slide"><img src="fotos/MILWAUKEE.png" alt="Imagen 4" data-id="imagen4"></div>
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next swiper-button-next-top"></div>
+                        <div class="swiper-button-prev swiper-button-prev-top"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item" id="item8">
+            <div class="overlay"><p>GUíA TÉCNICA DE SEGURIDAD ELÉCTRICA</p></div>
+        </div>
+            <div class="grid-item" id="item9">
+                <div class="overlay">NOTICIAS</div>
+            </div>    
+        </div>
+    </div>
+    <button id="openModalBtn">Abrir Modal</button>
+
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+                <p>Este es el contenido del modal.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Resto del contenido de la página -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.x/gsap.min.js"></script>
+    <script src="index.js"></script>
+    
+</body>
+
+</html>

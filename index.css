@@ -1,0 +1,347 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Evita el desplazamiento cuando el video está en reproducción */
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 10%; /* 20% de la altura de la ventana */
+    background: linear-gradient(to bottom, rgb(255, 255, 255, 0), rgba(255, 255, 255, 0)); /* Difuminado hacia abajo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.header-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comulsalogo-image {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 90%; /* El 90% restante de la altura de la ventana */
+    overflow: hidden;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra toda el área de la contenedora */
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr 1.5fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1.5fr 1fr 1.5fr 1fr 1fr 1.5fr;
+    gap: 5px;
+    width: 75%;
+    margin: 80px auto;
+    padding: 60px 15px 8px 15px;
+    box-sizing: border-box;
+    background-color: rgba(48, 47, 47, 0);
+    z-index: 1;
+    height: 85%;
+    border-radius: 8px;
+}
+#item1 {
+    grid-column: span 3;
+    grid-row: span 4;
+}
+#item2
+{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+#item3 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+#item4 {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+#item5{
+    grid-column: span 3 ;
+    grid-row: span 1;
+}
+#item6{
+    grid-column: span 1;
+    grid-row: span 2;
+}
+#item7{
+    grid-column: span 4;
+    grid-row: span 2 ;
+}
+#item8{
+    grid-column: span 3;
+    grid-row: span 1 ;
+}
+#item9{
+    grid-column: span 2 ;
+    grid-row: span 1;
+}
+
+
+.grid-item {
+    position: relative;
+    background: #05050500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.grid-item2 {
+    position: relative;
+    background: rgb(232, 59, 84);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.grid-item3 {
+    position: relative;
+    background: #0e0e0e3a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.grid-item img {
+   /* width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);*/
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.grid-item2 img {
+     max-width: 100%;
+     max-height: 100%;
+     object-fit: cover;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     cursor: pointer;
+ }
+
+/* Estilos para el overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,0); /* Color semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    font-weight: bold;
+}
+
+.grid-item:hover .overlay, .grid-item:hover .overlay {
+    opacity: 1;
+}
+#item6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(232, 59, 84); /* Asegúrate de que el fondo sea consistente */
+    color: rgb(255, 255, 255);
+    font-size: 20px; /* Tamaño de fuente para el texto del overlay */
+    text-align: center; /* Alineación del texto si no se utiliza flexbox */
+}
+#item8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(232, 59, 84); /* Asegúrate de que el fondo sea consistente */
+    color: rgb(255, 255, 255);
+    font-size: 20px; /* Tamaño de fuente para el texto del overlay */
+    
+}
+#item9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #b2b0b0; /* Asegúrate de que el fondo sea consistente */
+    color: rgba(0, 0, 0, 0.985);
+    font-size: 30px; /* Tamaño de fuente para el texto del overlay */
+}
+.scroll-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 50%;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 100%;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #333;
+}
+
+/* Estilos específicos para cada contenedor de swiper */
+.swiper-button-next-top,
+.swiper-button-prev-top {
+    top: 50%;
+}
+
+.swiper-button-next-bottom,
+.swiper-button-prev-bottom {
+    top: 50%;
+}
+#openModalBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.modal.show {
+    display: block;
+    animation: slideIn 1.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate(-100%, -100%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+/*@keyframes slideOut {
+    from {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    to {
+        transform: translate(-100%, -100%);
+        opacity: 0;
+    }
+}
+.modal.slide-out {
+    animation: slideOut 1.5s forwards;
+}*/
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #05050575;
+    width: 90%;
+    max-width: 900px;
+    height: 72%;
+    top: 10vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+iframe {
+    position: absolute;
+    object-fit:cover;
+    top: 0;
+    left:0;
+    width: 100%;
+    max-height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    /*float: right;*/
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute; /* Asegura que el botón se posicione dentro del contenedor relativo */
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    right: 10px; /* Ajusta la distancia desde la parte derecha */
+    width: 30px; /* Ajusta el tamaño del botón */
+    height: 30px; /* Ajusta el tamaño del botón */
+    display: flex; /* Centra el contenido dentro del botón */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    background-color: #fefefe; /* Fondo del botón */
+    border: 2px solid #fcfcfc; /* Borde del botón */
+    border-radius: 50%; /* Hace el botón redondo */
+    box-shadow: 0 4px 6px rgb(232, 59, 84); /* Sombra del botón */
+    z-index: 1000;
+}
+.close:hover,
+.close:focus {
+    color: rgb(249, 1, 1);
+    text-decoration: none;
+    background-color: #b2b0b0; /* Cambio de fondo al pasar el cursor */
+}
